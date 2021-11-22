@@ -1,6 +1,6 @@
 
 
-GRID_02_POLY_STR = lambda *, __NAME__, __STYLE__, __WEST__, __SOUTH__, __NORTH__, __EAST__, __ALT__: f"""
+GRID_POLY_STR = lambda *, __NAME__, __STYLE__, __WEST__, __SOUTH__, __NORTH__, __EAST__, __ALT__: f"""
 		<Placemark>
 			<name>{__NAME__}</name>
 			<styleUrl>#{__STYLE__}</styleUrl>
@@ -17,29 +17,27 @@ GRID_02_POLY_STR = lambda *, __NAME__, __STYLE__, __WEST__, __SOUTH__, __NORTH__
 		</Placemark>
 """
 
-STYLE_STR = lambda f"""
-	<Style id="sn_ylw-pushpin0">
+STYLE_STR = lambda __STYLE_ID__, __ICON_URI__, __HOTSPOT_X__, __HOTSPOT_Y__, __HOTSPOT_X_UNIT__, __HOTSPOT_Y_UNIT__, __LINE_COLOR__, __POLY_COLOR__, __COLOR_MODE__: f"""
+	<Style id="{__STYLE_ID__}">
 		<IconStyle>
 			<scale>1.1</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				<href>{__ICON_URI__}</href>
 			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			<hotSpot x="{__HOTSPOT_X__}" y="{__HOTSPOT_Y__}" xunits="{__HOTSPOT_X_UNIT__}" yunits="{__HOTSPOT_Y_UNIT__}"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ff00</color>
+			<color>{__LINE_COLOR__}</color>
 		</LineStyle>
 		<PolyStyle>
-			<color>6600ffaa</color>
-			<colorMode>random</colorMode>
+			<color>{__POLY_COLOR__}</color>
+			<colorMode>{__COLOR_MODE__}</colorMode>
 		</PolyStyle>
 	</Style>
-
 """
+
 class maidenhead(object):
 	# fold here ⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1
-	def __init__(self):
-		pass
 
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 	# start of __init__
@@ -75,42 +73,36 @@ class maidenhead(object):
 				"NORTH": (180 / 2),
 				"SOUTH": -(180 / 2),
 		}
-
 		self._THREE_FOUR_RANGES_ = {
 				"EAST": self._ONE_TWO_LAT_INC_,
 				"WEST": (0),
 				"NORTH": self._ONE_TWO_LON_INC_,
 				"SOUTH": (0),
 		}
-
 		self._FIVE_SIX_RANGES_ = {
 				"EAST": self._THREE_FOUR_LAT_INC_,
 				"WEST": (0),
 				"NORTH": self._THREE_FOUR_LON_INC_,
 				"SOUTH": (0),
 		}
-
 		self._SEVEN_EIGHT_RANGES_ = {
 				"EAST": self._FIVE_SIX_LAT_INC_,
 				"WEST": (0),
 				"NORTH": self._FIVE_SIX_LON_INC_,
 				"SOUTH": (0),
 		}
-
 		self._NINE_TEN_RANGES_ = {
 				"EAST": self._SEVEN_EIGHT_LAT_INC_,
 				"WEST": (0),
 				"NORTH": self._SEVEN_EIGHT_LON_INC_,
 				"SOUTH": (0),
 		}
-
 		self._ELEVEN_TWELVE_RANGES_ = {
 				"EAST": self._NINE_TEN_LAT_INC_,
 				"WEST": (0),
 				"NORTH": self._NINE_TEN_LON_INC_,
 				"SOUTH": (0),
 		}
-
 		self._THIRTEEN_FOURTEEN_RANGES_ = {
 				"EAST": self._ELEVEN_TWELVE_LAT_INC_,
 				"WEST": (0),
