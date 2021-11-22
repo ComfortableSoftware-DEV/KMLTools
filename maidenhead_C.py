@@ -9,7 +9,7 @@ GRID_02_POLY_STR = lambda *, __NAME__, __STYLE__, __WEST__, __SOUTH__, __NORTH__
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							{__WEST__:0f},{__SOUTH__},__ALT__ {__WEST__},{__NORTH__},__ALT__ {__EAST__},{__NORTH__},__ALT__ {__EAST__},{__SOUTH__},__ALT__ {__WEST__},{__SOUTH__},__ALT__
+							{__WEST__},{__SOUTH__},__ALT__ {__WEST__},{__NORTH__},__ALT__ {__EAST__},{__NORTH__},__ALT__ {__EAST__},{__SOUTH__},__ALT__ {__WEST__},{__SOUTH__},__ALT__
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
