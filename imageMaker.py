@@ -1,7 +1,8 @@
 #! /usr/bin/env /usr/bin/python
 
 
-import maidenhead_C as MH
+from maidenhead_C import maidenhead as MH
 
-MH.maidenhead()
+
+print(f"""{help(MH.makeGrid02)}""")
 #

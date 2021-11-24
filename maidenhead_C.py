@@ -1,40 +1,42 @@
 
 
-GRID_POLY_STR = lambda *, __NAME__, __STYLE__, __WEST__, __SOUTH__, __NORTH__, __EAST__, __ALT__: f"""
-		<Placemark>
-			<name>{__NAME__}</name>
-			<styleUrl>#{__STYLE__}</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							{__WEST__},{__SOUTH__},__ALT__ {__WEST__},{__NORTH__},__ALT__ {__EAST__},{__NORTH__},__ALT__ {__EAST__},{__SOUTH__},__ALT__ {__WEST__},{__SOUTH__},__ALT__
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-"""
+from CF.CONST_D import _00_VALS as CFV
 
-STYLE_STR = lambda __STYLE_ID__, __ICON_URI__, __HOTSPOT_X__, __HOTSPOT_Y__, __HOTSPOT_X_UNIT__, __HOTSPOT_Y_UNIT__, __LINE_COLOR__, __POLY_COLOR__, __COLOR_MODE__: f"""
-	<Style id="{__STYLE_ID__}">
-		<IconStyle>
-			<scale>1.1</scale>
-			<Icon>
-				<href>{__ICON_URI__}</href>
-			</Icon>
-			<hotSpot x="{__HOTSPOT_X__}" y="{__HOTSPOT_Y__}" xunits="{__HOTSPOT_X_UNIT__}" yunits="{__HOTSPOT_Y_UNIT__}"/>
-		</IconStyle>
-		<LineStyle>
-			<color>{__LINE_COLOR__}</color>
-		</LineStyle>
-		<PolyStyle>
-			<color>{__POLY_COLOR__}</color>
-			<colorMode>{__COLOR_MODE__}</colorMode>
-		</PolyStyle>
-	</Style>
-"""
+
+def TDocumentHead(*,
+		ID_=None,
+		NAME_=None,
+		VISIBILITY_=None,
+		OPEN_=None,
+		ATOM_AUTHOR_=None,
+		ATOM_LINK_=None,
+):
+			self.__DOCUMENT__ = f"""<Document id="ID">
+		<!-- inherited from Feature element -->
+		<name>...</name>                      <!-- string -->
+		<visibility>1</visibility>            <!-- boolean -->
+		<open>0</open>                        <!-- boolean -->
+		<atom:author>...<atom:author>         <!-- xmlns:atom -->
+		<atom:link href=" "/>                 <!-- xmlns:atom -->
+		<address>...</address>                <!-- string -->
+		<xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+		<phoneNumber>...</phoneNumber>        <!-- string -->
+		<Snippet maxLines="2">...</Snippet>   <!-- string -->
+		<description>...</description>        <!-- string -->
+		<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+		<TimePrimitive>...</TimePrimitive>
+		<styleUrl>...</styleUrl>              <!-- anyURI -->
+		<StyleSelector>...</StyleSelector>
+		<Region>...</Region>
+		<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+		<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+
+		<!-- specific to Document -->
+		<!-- 0 or more Schema elements -->
+		<!-- 0 or more Feature elements -->
+	</Document>
+	"""
+
 
 class maidenhead(object):
 	# fold here ⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1
@@ -44,6 +46,44 @@ class maidenhead(object):
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 	def __init__(self):
 		# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
+
+		self.GRID_POLY_STR = lambda *, __NAME__, __VISIBILITY__, __STYLE_ID__, __WEST__, __SOUTH__, __NORTH__, __EAST__, __ALT__: f"""
+	<Placemark>
+		<name>{__NAME__}</name>
+		<visibility>{__VISIBILITY__}</visibility>
+		<styleUrl>{__STYLE_ID__}</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						{__WEST__},{__SOUTH__},0 {__WEST__},{__NORTH__},0 {__EAST__},{__NORTH__},0 {__EAST__},{__SOUTH__},0 {__EAST__},{__SOUTH__},0
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+"""
+
+		self.STYLE_STR = lambda __STYLE_ID__, __ICON_URI__, __HOTSPOT_X__, __HOTSPOT_Y__, __HOTSPOT_X_UNIT__, __HOTSPOT_Y_UNIT__, __LINE_COLOR__, __POLY_COLOR__, __COLOR_MODE__: f"""
+			<Style id="{__STYLE_ID__}">
+				<IconStyle>
+					<scale>1.1</scale>
+					<Icon>
+						<href>{__ICON_URI__}</href>
+					</Icon>
+					<hotSpot x="{__HOTSPOT_X__}" y="{__HOTSPOT_Y__}" xunits="{__HOTSPOT_X_UNIT__}" yunits="{__HOTSPOT_Y_UNIT__}"/>
+				</IconStyle>
+				<LineStyle>
+					<color>{__LINE_COLOR__}</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>{__POLY_COLOR__}</color>
+					<colorMode>{__COLOR_MODE__}</colorMode>
+				</PolyStyle>
+			</Style>
+		"""
+
 		self._ONE_TWO_CHAR_LIST_ = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R"]
 		self._THREE_FOUR_CHAR_LIST = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 		self._FIVE_SIX_CHAR_LIST_ = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x"]
@@ -118,9 +158,22 @@ class maidenhead(object):
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 	# start of makeGrid02
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-	def makeGrid02(self):
+	def makeGrid02(self, *,
+		__WEST__=None,
+		__SOUTH__=None,
+		__EAST__=None,
+		__NORTH__=None,
+		__SOUTHWEST__=None,
+		__NORTHEAST__=None,
+	):
+		"""
+		Input is the first found of four D.dddddddddddddddddd points, or two IARU fields "AA" to "RR"
+		Origin of each field is the southwest corner per the IARU standard.
+		D.dddddddddddddddddd will be moved toward the southwest until a standard corner is met.
+		Then toward the northeast until a standard corner is met.
+		"""
 		# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
-
+		_strToRtn_ = ""
 		# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 	# end of makeGrid02
