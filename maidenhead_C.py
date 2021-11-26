@@ -3,51 +3,63 @@
 from CF.CONST_D import _00_VALS as CFV
 
 
-def TDocumentHead(*,
-		ID_=None,
-		NAME_=None,
-		VISIBILITY_=None,
-		OPEN_=None,
-		ATOM_AUTHOR_=None,
-		ATOM_LINK_=None,
+def DOCUMENT_HEAD_STR(*,
+		abstractView=None,
+		address_=None,
+		addressDetails=None,
+		author_=None,
+		description=None,
+		extendedData=None,
+		id_=None,
+		isopen_=None,
+		link_=None,
+		name_=None,
+		phoneNumber=None,
+		region=None,
+		snippet=None,
+		styleSelector=None,
+		styleUrl=None,
+		timePrimitive=None,
+		visibility_=None,
 ):
-			self.__DOCUMENT__ = f"""<Document id="ID">
-		<!-- inherited from Feature element -->
-		<name>...</name>                      <!-- string -->
-		<visibility>1</visibility>            <!-- boolean -->
-		<open>0</open>                        <!-- boolean -->
-		<atom:author>...<atom:author>         <!-- xmlns:atom -->
-		<atom:link href=" "/>                 <!-- xmlns:atom -->
-		<address>...</address>                <!-- string -->
-		<xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
-		<phoneNumber>...</phoneNumber>        <!-- string -->
-		<Snippet maxLines="2">...</Snippet>   <!-- string -->
-		<description>...</description>        <!-- string -->
-		<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
-		<TimePrimitive>...</TimePrimitive>
-		<styleUrl>...</styleUrl>              <!-- anyURI -->
-		<StyleSelector>...</StyleSelector>
-		<Region>...</Region>
-		<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
-		<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
-
-		<!-- specific to Document -->
-		<!-- 0 or more Schema elements -->
-		<!-- 0 or more Feature elements -->
-	</Document>
-	"""
-
-
-class maidenhead(object):
 	# fold here ⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1
+	_strToRtn_ = ""
+	# * 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱
+	if (
+			(id_ is None)
+	):
+		_strToRtn_ += f""""""
+	# * ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1
 
-	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-	# start of __init__
-	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-	def __init__(self):
-		# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
+	f"""
+<Document id="ID">
+	<!-- inherited from Feature element -->
+	<name>...</name>                      <!-- string -->
+	<visibility>1</visibility>            <!-- boolean -->
+	<open>0</open>                        <!-- boolean -->
+	<atom:author>...<atom:author>         <!-- xmlns:atom -->
+	<atom:link href=" "/>                 <!-- xmlns:atom -->
+	<address>...</address>                <!-- string -->
+	<xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+	<phoneNumber>...</phoneNumber>        <!-- string -->
+	<Snippet maxLines="2">...</Snippet>   <!-- string -->
+	<description>...</description>        <!-- string -->
+	<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+	<TimePrimitive>...</TimePrimitive>
+	<styleUrl>...</styleUrl>              <!-- anyURI -->
+	<StyleSelector>...</StyleSelector>
+	<Region>...</Region>
+	<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+	<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
 
-		self.GRID_POLY_STR = lambda *, __NAME__, __VISIBILITY__, __STYLE_ID__, __WEST__, __SOUTH__, __NORTH__, __EAST__, __ALT__: f"""
+	<!-- specific to Document -->
+	<!-- 0 or more Schema elements -->
+	<!-- 0 or more Feature elements -->
+</Document>
+"""
+	# fold here ⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1
+
+GRID_POLY_STR = lambda __NAME__, __VISIBILITY__, __STYLE_ID__, __WEST__, __SOUTH__, __NORTH__, __EAST__, __ALT__: f"""
 	<Placemark>
 		<name>{__NAME__}</name>
 		<visibility>{__VISIBILITY__}</visibility>
@@ -57,7 +69,7 @@ class maidenhead(object):
 			<outerBoundaryIs>
 				<LinearRing>
 					<coordinates>
-						{__WEST__},{__SOUTH__},0 {__WEST__},{__NORTH__},0 {__EAST__},{__NORTH__},0 {__EAST__},{__SOUTH__},0 {__EAST__},{__SOUTH__},0
+						{__WEST__},{__SOUTH__},0 {__WEST__},{__NORTH__},0 {__EAST__},{__NORTH__},0 {__EAST__},{__SOUTH__},0 {__WEST__},{__SOUTH__},0
 					</coordinates>
 				</LinearRing>
 			</outerBoundaryIs>
@@ -65,7 +77,7 @@ class maidenhead(object):
 	</Placemark>
 """
 
-		self.STYLE_STR = lambda __STYLE_ID__, __ICON_URI__, __HOTSPOT_X__, __HOTSPOT_Y__, __HOTSPOT_X_UNIT__, __HOTSPOT_Y_UNIT__, __LINE_COLOR__, __POLY_COLOR__, __COLOR_MODE__: f"""
+STYLE_STR = lambda __STYLE_ID__, __ICON_URI__, __HOTSPOT_X__, __HOTSPOT_Y__, __HOTSPOT_X_UNIT__, __HOTSPOT_Y_UNIT__, __LINE_COLOR__, __POLY_COLOR__, __COLOR_MODE__: f"""
 			<Style id="{__STYLE_ID__}">
 				<IconStyle>
 					<scale>1.1</scale>
@@ -83,6 +95,16 @@ class maidenhead(object):
 				</PolyStyle>
 			</Style>
 		"""
+
+
+class maidenhead(object):
+	# fold here ⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1
+
+	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+	# start of __init__
+	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+	def __init__(self):
+		# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 
 		self._ONE_TWO_CHAR_LIST_ = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R"]
 		self._THREE_FOUR_CHAR_LIST = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -156,28 +178,135 @@ class maidenhead(object):
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-	# start of makeGrid02
+	# start of __enter__
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-	def makeGrid02(self, *,
-		__WEST__=None,
-		__SOUTH__=None,
-		__EAST__=None,
-		__NORTH__=None,
-		__SOUTHWEST__=None,
-		__NORTHEAST__=None,
-	):
-		"""
-		Input is the first found of four D.dddddddddddddddddd points, or two IARU fields "AA" to "RR"
-		Origin of each field is the southwest corner per the IARU standard.
-		D.dddddddddddddddddd will be moved toward the southwest until a standard corner is met.
-		Then toward the northeast until a standard corner is met.
-		"""
+	def __enter__(self):
 		# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
-		_strToRtn_ = ""
+		return self
 		# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-	# end of makeGrid02
+	# end of __enter__
 	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
+	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+	# start of latLonToMaidenhead
+	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+	def latLonToMaidenhead(self, *,
+			chrs_,  # how many characters 2, 4, 6, 8, 10, 12) of maidenhead to return
+			lat_,
+			lon_,
+	):
+		# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
+		_lat_ = lat_ + 90
+		_lon_ = lon_ + 180
+		_strToRtn_ = ""
+
+		_latIndex_ = (_lat_ / self._ONE_TWO_LAT_INC_)
+		_lonIndex_ = (_lon_ / self._ONE_TWO_LON_INC_)
+		_strToRtn_ += f"""{self._ONE_TWO_CHAR_LIST_[int(_lonIndex_)]}{self._ONE_TWO_CHAR_LIST_[int(_latIndex_)]}"""
+# 		print(f"""first
+# lat_ {lat_}   _lat_ {_lat_}
+# lon_ {lon_}   _lon_ {_lon_}
+# _latIndex_ {_latIndex_}
+# _lonIndex_ {_lonIndex_}
+# _strToRtn_ {_strToRtn_}
+# """)
+		# * 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
+		if (
+				(chrs_ == 2)
+		):
+			return _strToRtn_
+		# * ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
+
+		_lat_ = _lat_ - (int(_latIndex_) * self._ONE_TWO_LAT_INC_)
+		_lon_ = _lon_ - (int(_lonIndex_) * self._ONE_TWO_LON_INC_)
+		_latIndex_ = (_lat_ / self._THREE_FOUR_LAT_INC_)
+		_lonIndex_ = (_lon_ / self._THREE_FOUR_LON_INC_)
+		_strToRtn_ += f"""{self._THREE_FOUR_CHAR_LIST[int(_lonIndex_)]}{self._THREE_FOUR_CHAR_LIST[int(_latIndex_)]}"""
+# 		print(f"""second
+# lat_ {lat_}   _lat_ {_lat_}
+# lon_ {lon_}   _lon_ {_lon_}
+# _latIndex_ {_latIndex_}
+# _lonIndex_ {_lonIndex_}
+# _strToRtn_ {_strToRtn_}
+# """)
+		# * 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
+		if (
+				(chrs_ == 4)
+		):
+			return _strToRtn_
+		# * ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
+		_lat_ = _lat_ - (int(_latIndex_) * self._THREE_FOUR_LAT_INC_)
+		_lon_ = _lon_ - (int(_lonIndex_) * self._THREE_FOUR_LON_INC_)
+		_latIndex_ = (_lat_ / self._FIVE_SIX_LAT_INC_)
+		_lonIndex_ = (_lon_ / self._FIVE_SIX_LON_INC_)
+		_strToRtn_ += f"""{self._FIVE_SIX_CHAR_LIST_[int(_lonIndex_)]}{self._FIVE_SIX_CHAR_LIST_[int(_latIndex_)]}"""
+# 		print(f"""third
+# lat_ {lat_}   _lat_ {_lat_}
+# lon_ {lon_}   _lon_ {_lon_}
+# _latIndex_ {_latIndex_}
+# _lonIndex_ {_lonIndex_}
+# _strToRtn_ {_strToRtn_}
+# """)
+		# * 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
+		if (
+				(chrs_ == 6)
+		):
+			return _strToRtn_
+		# * ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
+		_lat_ = _lat_ - (int(_latIndex_) * self._FIVE_SIX_LAT_INC_)
+		_lon_ = _lon_ - (int(_lonIndex_) * self._FIVE_SIX_LON_INC_)
+		_latIndex_ = (_lat_ / self._SEVEN_EIGHT_LAT_INC_)
+		_lonIndex_ = (_lon_ / self._SEVEN_EIGHT_LON_INC_)
+		_strToRtn_ += f"""{self._SEVEN_EIGHT_CHAR_LIST_[int(_lonIndex_)]}{self._SEVEN_EIGHT_CHAR_LIST_[int(_latIndex_)]}"""
+# 		print(f"""fourth
+# lat_ {lat_}   _lat_ {_lat_}
+# lon_ {lon_}   _lon_ {_lon_}
+# _latIndex_ {_latIndex_}
+# _lonIndex_ {_lonIndex_}
+# _strToRtn_ {_strToRtn_}
+# """)
+		# * 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
+		if (
+				(chrs_ == 8)
+		):
+			return _strToRtn_
+		# * ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
+		_lat_ = _lat_ - (int(_latIndex_) * self._SEVEN_EIGHT_LAT_INC_)
+		_lon_ = _lon_ - (int(_lonIndex_) * self._SEVEN_EIGHT_LON_INC_)
+		_latIndex_ = (_lat_ / self._NINE_TEN_LAT_INC_)
+		_lonIndex_ = (_lon_ / self._NINE_TEN_LON_INC_)
+		_strToRtn_ += f"""{self._NINE_TEN_CHAR_LIST_[int(_lonIndex_)]}{self._NINE_TEN_CHAR_LIST_[int(_latIndex_)]}"""
+# 		print(f"""fourth
+# lat_ {lat_}   _lat_ {_lat_}
+# lon_ {lon_}   _lon_ {_lon_}
+# _latIndex_ {_latIndex_}
+# _lonIndex_ {_lonIndex_}
+# _strToRtn_ {_strToRtn_}
+# """)
+		# * 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
+		if (
+				(chrs_ == 10)
+		):
+			return _strToRtn_
+		# * ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
+		_lat_ = _lat_ - (int(_latIndex_) * self._NINE_TEN_LAT_INC_)
+		_lon_ = _lon_ - (int(_lonIndex_) * self._NINE_TEN_LON_INC_)
+		_latIndex_ = (_lat_ / self._ELEVEN_TWELVE_LAT_INC_)
+		_lonIndex_ = (_lon_ / self._ELEVEN_TWELVE_LON_INC_)
+		_strToRtn_ += f"""{self._ELEVEN_TWELVE_CHAR_LIST_[int(_lonIndex_)]}{self._ELEVEN_TWELVE_CHAR_LIST_[int(_latIndex_)]}"""
+# 		print(f"""fifth
+# lat_ {lat_}   _lat_ {_lat_}
+# lon_ {lon_}   _lon_ {_lon_}
+# _latIndex_ {_latIndex_}
+# _lonIndex_ {_lonIndex_}
+# _strToRtn_ {_strToRtn_}
+# """)
+		# * 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
+		return _strToRtn_
+		# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
+	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+	# end of latLonToMaidenhead
+	# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 	# fold here ⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1

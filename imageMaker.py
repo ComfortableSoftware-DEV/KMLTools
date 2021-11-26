@@ -1,8 +1,11 @@
 #! /usr/bin/env /usr/bin/python
 
 
-from maidenhead_C import maidenhead as MH
+import maidenhead_C
+MH = maidenhead_C.maidenhead()
 
 
-print(f"""{help(MH.makeGrid02)}""")
+print(f"""{MH.latLonToMaidenhead(lat_= 40.687088, lon_=-111.927630, chrs_=12)}""")
+
+
 #
