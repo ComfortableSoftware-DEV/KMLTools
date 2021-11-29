@@ -1,110 +1,133 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <kml 
-	xmlns="http://www.opengis.net/kml/2.2" 
-	xmlns:gx="http://www.google.com/kml/ext/2.2" 
-	xmlns:kml="http://www.opengis.net/kml/2.2" 
-	xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns="http://www.opengis.net/kml/2.2" 
+  xmlns:gx="http://www.google.com/kml/ext/2.2" 
+  xmlns:kml="http://www.opengis.net/kml/2.2" 
+  xmlns:atom="http://www.w3.org/2005/Atom"
 >
 <Document>
-	<name>justThePointsMaam.kml</name>
+  <name>justThePointsMaam.kml</name>
 
 <Document id="ID">
-	<!-- inherited from Feature element -->
-	<name>...</name>                      <!-- string -->
-	<visibility>1</visibility>            <!-- boolean -->
-	<open>0</open>                        <!-- boolean -->
-	<atom:author>...<atom:author>         <!-- xmlns:atom -->
-	<atom:link href=" "/>                 <!-- xmlns:atom -->
-	<address>...</address>                <!-- string -->
-	<xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
-	<phoneNumber>...</phoneNumber>        <!-- string -->
-	<Snippet maxLines="2">...</Snippet>   <!-- string -->
-	<description>...</description>        <!-- string -->
-	<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
-	<TimePrimitive>...</TimePrimitive>
-	<styleUrl>...</styleUrl>              <!-- anyURI -->
-	<StyleSelector>...</StyleSelector>
-	<Region>...</Region>
-	<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
-	<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                 <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
 
-	<!-- specific to Document -->
-	<!-- 0 or more Schema elements -->
-	<!-- 0 or more Feature elements -->
+  <!-- specific to Document -->
+  <!-- 0 or more Schema elements -->
+  <!-- 0 or more Feature elements -->
 </Document>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+<Camera id="ID">
+  <!-- inherited from AbstractView element -->
+  <TimePrimitive>...</TimePrimitive>  <!-- gx:TimeSpan or gx:TimeStamp -->
+  <gx:ViewerOptions>
+    <option> name=" " type="boolean">     <!-- name="streetview", "historicalimagery", "sunlight", or "groundnavigation" -->
+    </option>
+  </gx:ViewerOptions>
+
+  <!-- specific to Camera -->
+  <longitude>0</longitude>            <!-- kml:angle180 -->
+  <latitude>0</latitude>              <!-- kml:angle90 -->
+  <altitude>0</altitude>              <!-- double -->
+  <heading>0</heading>                <!-- kml:angle360 -->
+  <tilt>0</tilt>                      <!-- kml:anglepos180 -->
+  <roll>0</roll>                      <!-- kml:angle180 -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute -->
+        <!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor -->
+</Camera> 
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
 <Placemark id="ID">
-	<!-- inherited from Feature element -->
-	<name>...</name>                      <!-- string -->
-	<visibility>1</visibility>            <!-- boolean -->
-	<open>0</open>                        <!-- boolean -->
-	<atom:author>...<atom:author>         <!-- xmlns:atom -->
-	<atom:link href=" "/>                <!-- xmlns:atom -->
-	<address>...</address>                <!-- string -->
-	<xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
-	<phoneNumber>...</phoneNumber>        <!-- string -->
-	<Snippet maxLines="2">...</Snippet>   <!-- string -->
-	<description>...</description>        <!-- string -->
-	<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
-	<TimePrimitive>...</TimePrimitive>
-	<styleUrl>...</styleUrl>              <!-- anyURI -->
-	<StyleSelector>...</StyleSelector>
-	<Region>...</Region>
-	<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
-	<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
 
-	<!-- specific to Placemark element -->
-	<Geometry>...</Geometry>
+  <!-- specific to Placemark element -->
+  <Geometry>...</Geometry>
 </Placemark>
 
 <Point id="ID">
-	<!-- specific to Point -->
-	<extrude>0</extrude>                        <!-- boolean -->
-	<altitudeMode>clampToGround</altitudeMode>
-				<!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
-				<!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
-	<coordinates>...</coordinates>              <!-- lon,lat[,alt] -->
+  <!-- specific to Point -->
+  <extrude>0</extrude>                        <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <coordinates>...</coordinates>              <!-- lon,lat[,alt] -->
 </Point>
 
 <Polygon id="ID">
-	<!-- specific to Polygon -->
-	<extrude>0</extrude>                       <!-- boolean -->
-	<tessellate>0</tessellate>                 <!-- boolean -->
-	<altitudeMode>clampToGround</altitudeMode>
-				<!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
-				<!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
-	<outerBoundaryIs>
-		<LinearRing>
-			<coordinates>...</coordinates>         <!-- lon,lat[,alt] -->
-		</LinearRing>
-	</outerBoundaryIs>
-	<innerBoundaryIs>
-		<LinearRing>
-			<coordinates>...</coordinates>         <!-- lon,lat[,alt] -->
-		</LinearRing>
-	</innerBoundaryIs>
+  <!-- specific to Polygon -->
+  <extrude>0</extrude>                       <!-- boolean -->
+  <tessellate>0</tessellate>                 <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <outerBoundaryIs>
+    <LinearRing>
+      <coordinates>...</coordinates>         <!-- lon,lat[,alt] -->
+    </LinearRing>
+  </outerBoundaryIs>
+  <innerBoundaryIs>
+    <LinearRing>
+      <coordinates>...</coordinates>         <!-- lon,lat[,alt] -->
+    </LinearRing>
+  </innerBoundaryIs>
 </Polygon>
 
 <Style id="ID">
 <!-- extends StyleSelector -->
 <!-- specific to Style -->
-	<IconStyle>...</IconStyle>
-	<LabelStyle>...</LabelStyle>
-	<LineStyle>...</LineStyle>
-	<PolyStyle>...</PolyStyle>
-	<BalloonStyle>...</BalloonStyle>
-	<ListStyle>...</ListStyle>
+  <IconStyle>...</IconStyle>
+  <LabelStyle>...</LabelStyle>
+  <LineStyle>...</LineStyle>
+  <PolyStyle>...</PolyStyle>
+  <BalloonStyle>...</BalloonStyle>
+  <ListStyle>...</ListStyle>
 </Style>
 
 <StyleMap id="ID">
-	<!-- extends StyleSelector -->
-	<!-- elements specific to StyleMap -->
-	<Pair id="ID">
-		<key>normal</key>              <!-- kml:styleStateEnum:  normal or highlight -->
-		<styleUrl>...</styleUrl> or <Style>...</Style>
-	</Pair>
+  <!-- extends StyleSelector -->
+  <!-- elements specific to StyleMap -->
+  <Pair id="ID">
+    <key>normal</key>              <!-- kml:styleStateEnum:  normal or highlight -->
+    <styleUrl>...</styleUrl> or <Style>...</Style>
+  </Pair>
 </StyleMap>
 
 !
