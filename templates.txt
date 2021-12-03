@@ -1,15 +1,12 @@
 
-<?xml version="1.0" encoding="UTF-8"?>
+……**TOP <?xml version="1.0" encoding="UTF-8"?>
 <kml 
   xmlns="http://www.opengis.net/kml/2.2" 
   xmlns:gx="http://www.google.com/kml/ext/2.2" 
   xmlns:kml="http://www.opengis.net/kml/2.2" 
   xmlns:atom="http://www.w3.org/2005/Atom"
 >
-<Document>
-  <name>justThePointsMaam.kml</name>
-
-<Document id="ID">
+……<Document id="ID">
   <!-- inherited from Feature element -->
   <name>...</name>                      <!-- string -->
   <visibility>1</visibility>            <!-- boolean -->
@@ -21,22 +18,21 @@
   <phoneNumber>...</phoneNumber>        <!-- string -->
   <Snippet maxLines="2">...</Snippet>   <!-- string -->
   <description>...</description>        <!-- string -->
-  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
-  <TimePrimitive>...</TimePrimitive>
-  <styleUrl>...</styleUrl>              <!-- anyURI -->
-  <StyleSelector>...</StyleSelector>
-  <Region>...</Region>
-  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
-  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
-
+  **<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  **<TimePrimitive>...</TimePrimitive>
+  **<styleUrl>...</styleUrl>              <!-- anyURI -->
+  **<StyleSelector>...</StyleSelector>
+  **<Region>...</Region>
+  **<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  **<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
   <!-- specific to Document -->
-  <!-- 0 or more Schema elements -->
-  <!-- 0 or more Feature elements -->
-</Document>
+  **<!-- 0 or more Schema elements -->
+  **<!-- 0 or more Feature elements -->
+**END </Document>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
-<Camera id="ID">
+**MIDDLE <Camera id="ID">
   <!-- inherited from AbstractView element -->
   <TimePrimitive>...</TimePrimitive>  <!-- gx:TimeSpan or gx:TimeStamp -->
   <gx:ViewerOptions>
@@ -58,7 +54,20 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
-<Placemark id="ID">
+**MIDDLE <ExtendedData>                       
+  <Data name="string">
+    <displayName>...</displayName>    <!-- string -->
+    <value>...</value>                <!-- string -->
+  </Data>
+  <SchemaData schemaUrl="anyURI">
+    <SimpleData name=""> ... </SimpleData>   <!-- string -->
+  </SchemaData>
+  <namespace_prefix:other>...</namespace_prefix:other>
+</ExtendedData>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**BOTTOM <Placemark id="ID">
   <!-- inherited from Feature element -->
   <name>...</name>                      <!-- string -->
   <visibility>1</visibility>            <!-- boolean -->
@@ -77,12 +86,13 @@
   <Region>...</Region>
   <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
   <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
-
   <!-- specific to Placemark element -->
   <Geometry>...</Geometry>
 </Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
-<Point id="ID">
+
+**BOTTOM <Point id="ID">
   <!-- specific to Point -->
   <extrude>0</extrude>                        <!-- boolean -->
   <altitudeMode>clampToGround</altitudeMode>
@@ -90,8 +100,10 @@
         <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
   <coordinates>...</coordinates>              <!-- lon,lat[,alt] -->
 </Point>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
-<Polygon id="ID">
+
+**BOTTOM <Polygon id="ID">
   <!-- specific to Polygon -->
   <extrude>0</extrude>                       <!-- boolean -->
   <tessellate>0</tessellate>                 <!-- boolean -->
@@ -109,8 +121,32 @@
     </LinearRing>
   </innerBoundaryIs>
 </Polygon>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
-<Style id="ID">
+
+**MIDDLE <Region id="ID"> 
+  <LatLonAltBox>
+    <north></north>                            <!-- required; kml:angle90 -->
+    <south></south>                            <!-- required; kml:angle90 -->
+    <east></east>                              <!-- required; kml:angle180 -->
+    <west></west>                              <!-- required; kml:angle180 -->
+    <minAltitude>0</minAltitude>               <!-- float -->
+    <maxAltitude>0</maxAltitude>               <!-- float -->
+    <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  </LatLonAltBox>
+  <Lod>
+    <minLodPixels>0</minLodPixels>             <!-- float -->
+    <maxLodPixels>-1</maxLodPixels>            <!-- float -->
+    <minFadeExtent>0</minFadeExtent>           <!-- float -->
+    <maxFadeExtent>0</maxFadeExtent>           <!-- float -->
+  </Lod>
+</Region> 
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <Style id="ID">
 <!-- extends StyleSelector -->
 <!-- specific to Style -->
   <IconStyle>...</IconStyle>
@@ -120,8 +156,10 @@
   <BalloonStyle>...</BalloonStyle>
   <ListStyle>...</ListStyle>
 </Style>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
-<StyleMap id="ID">
+
+**MIDDLE <StyleMap id="ID">
   <!-- extends StyleSelector -->
   <!-- elements specific to StyleMap -->
   <Pair id="ID">
@@ -129,5 +167,14 @@
     <styleUrl>...</styleUrl> or <Style>...</Style>
   </Pair>
 </StyleMap>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <TimeSpan id="ID">
+  <begin>...</begin>     <!-- kml:dateTime -->
+  <end>...</end>         <!-- kml:dateTime -->
+</TimeSpan>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
 
 !
