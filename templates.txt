@@ -1,4 +1,18 @@
 
+
+<!-- abstract element; do not create -->
+<!-- AbstractView -->                       <!-- Camera, LookAt -->
+  <!-- extends Object -->
+  <TimePrimitive>...</TimePrimitive>        <!-- gx:TimeSpan or gx:TimeStamp -->
+  <gx:ViewerOptions>
+    <gx:option name="" enabled=boolean />   <!-- name="streetview",
+                                                      "historicalimagery",
+                                                   or "sunlight" -->
+  </gx:ViewerOptions>
+<-- /AbstractView -->
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
 ……**TOP <?xml version="1.0" encoding="UTF-8"?>
 <kml 
   xmlns="http://www.opengis.net/kml/2.2" 
@@ -39,7 +53,6 @@
     <option> name=" " type="boolean">     <!-- name="streetview", "historicalimagery", "sunlight", or "groundnavigation" -->
     </option>
   </gx:ViewerOptions>
-
   <!-- specific to Camera -->
   <longitude>0</longitude>            <!-- kml:angle180 -->
   <latitude>0</latitude>              <!-- kml:angle90 -->
