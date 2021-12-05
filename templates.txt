@@ -13,6 +13,11 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
+<gx:altitudeMode>clampToGround</gx:altitudeMode>
+  <!-- gx:altitudeModeEnum: relativeToSeaFloor, clampToSeaFloor, relativeToGround, clampToGround, absolute -->
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
 ……**TOP <?xml version="1.0" encoding="UTF-8"?>
 <kml 
   xmlns="http://www.opengis.net/kml/2.2" 
@@ -77,6 +82,21 @@
   </SchemaData>
   <namespace_prefix:other>...</namespace_prefix:other>
 </ExtendedData>
+
+    <Placemark>
+      <name>Club house</name>
+      <ExtendedData>
+        <Data name="holeNumber">
+          <value>1</value>
+        </Data>
+        <Data name="holeYardage">
+          <value>234</value>
+        </Data>
+        <Data name="holePar">
+          <value>4</value>
+        </Data>
+      </ExtendedData>
+    </Placemark>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -187,6 +207,23 @@
   <begin>...</begin>     <!-- kml:dateTime -->
   <end>...</end>         <!-- kml:dateTime -->
 </TimeSpan>
+
+    <Placemark>
+      <name>Colorado</name>
+      .
+      .
+      .
+      <TimeSpan>
+        <begin>1876-08-01</begin>
+      </TimeSpan>
+    </Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+<TimeStamp id="ID">
+  <when>...</when>      <!-- kml:dateTime -->
+</TimeStamp> 
+
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
