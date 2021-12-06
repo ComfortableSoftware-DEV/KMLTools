@@ -100,6 +100,23 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
+**MIDDLE <Link id="ID">
+	<!-- specific to Link -->
+	<href>...</href>                      <!-- string -->
+	<refreshMode>onChange</refreshMode>
+		<!-- refreshModeEnum: onChange, onInterval, or onExpire -->
+	<refreshInterval>4</refreshInterval>  <!-- float -->
+	<viewRefreshMode>never</viewRefreshMode>
+		<!-- viewRefreshModeEnum: never, onStop, onRequest, onRegion -->
+	<viewRefreshTime>4</viewRefreshTime>  <!-- float -->
+	<viewBoundScale>1</viewBoundScale>    <!-- float -->
+	<viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]</viewFormat>
+																				<!-- string -->
+	<httpQuery>...</httpQuery>            <!-- string -->
+</Link>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
 **BOTTOM <Placemark id="ID">
 	<!-- inherited from Feature element -->
 	<name>...</name>                      <!-- string -->
