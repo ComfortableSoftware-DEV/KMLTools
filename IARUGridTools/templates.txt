@@ -109,7 +109,7 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
-**MIDDLE <Link id="ID">
+……**MIDDLE <Link id="ID">
   <!-- specific to Link -->
   <href>...</href>                      <!-- string -->
   <refreshMode>onChange</refreshMode>
@@ -131,20 +131,47 @@
         [horizFov], [vertFov] - horizontal, vertical field of view for the camera
         [horizPixels], [vertPixels] - size in pixels of the 3D viewer
         [terrainEnabled] - indicates whether the 3D viewer is showing terrain
-<NetworkLink>
-  <name>NE US Radar</name>
-  <flyToView>1</flyToView>
-  <Link>
-    <href>http://www.example.com/geotiff/NE/MergedReflectivityQComposite.kml</href>
-    <refreshMode>onInterval</refreshMode>
-    <refreshInterval>30</refreshInterval>
-    <viewRefreshMode>onStop</viewRefreshMode>
-    <viewRefreshTime>7</viewRefreshTime>
-    <viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth];CAMERA=\
-      [lookatLon],[lookatLat],[lookatRange],[lookatTilt],[lookatHeading];VIEW=\
-      [horizFov],[vertFov],[horizPixels],[vertPixels],[terrainEnabled]</viewFormat>
-  </Link>
-</NetworkLink> 
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+<NetworkLink id="ID">
+  <!-- inherited from Feature element --><name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+   <atom:link href=" "/>               <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+
+  <!-- specific to NetworkLink -->
+  <refreshVisibility>0</refreshVisibility> <!-- boolean -->
+  <flyToView>0</flyToView>                 <!-- boolean -->
+  <Link>...</Link>
+</NetworkLink>
+
+    <NetworkLink>
+      <name>NE US Radar</name>
+      <flyToView>1</flyToView>
+      <Link>
+        <href>http://www.example.com/geotiff/NE/MergedReflectivityQComposite.kml</href>
+        <refreshMode>onInterval</refreshMode>
+        <refreshInterval>30</refreshInterval>
+        <viewRefreshMode>onStop</viewRefreshMode>
+        <viewRefreshTime>7</viewRefreshTime>
+        <viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth];CAMERA=\
+          [lookatLon],[lookatLat],[lookatRange],[lookatTilt],[lookatHeading];VIEW=\
+          [horizFov],[vertFov],[horizPixels],[vertPixels],[terrainEnabled]</viewFormat>
+      </Link>
+    </NetworkLink> 
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
