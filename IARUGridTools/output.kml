@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>cUrV1313kF</name>
+	<visibility>1</visibility>
+	<open>0</open>
+	<Placemark>
+		<name>rvJiNrVPNm</name>
+		<Point>
+			<altitudeMode>clampToGround</altitudeMode>
+			<coordinates>
+				0.00000000000000,0.00000000000000,0.00000000000000
+			</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+
+</kml>
