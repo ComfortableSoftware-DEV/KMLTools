@@ -45,14 +45,10 @@
   <gx:ViewerOptions>
     <option> name=" " type="boolean">     <!-- name="streetview", "historicalimagery", "sunlight", or "groundnavigation" -->
     </option>
-
   <gx:ViewerOptions>
-                                                <gx:option name="historicalimagery"></gx:option>
-                                                <gx:option enabled="0" name="sunlight"></gx:option>
-                                                <gx:option enabled="0" name="streetview"></gx:option>
-                                        </gx:ViewerOptions>
-
-
+    <gx:option name="historicalimagery"></gx:option>
+    <gx:option enabled="0" name="sunlight"></gx:option>
+    <gx:option enabled="0" name="streetview"></gx:option>
   </gx:ViewerOptions>
   <!-- specific to Camera -->
   <longitude>0</longitude>            <!-- kml:angle180 -->
@@ -78,7 +74,6 @@
   </SchemaData>
   <namespace_prefix:other>...</namespace_prefix:other>
 </ExtendedData>
-
     <Placemark>
       <name>Club house</name>
       <ExtendedData>
@@ -132,7 +127,6 @@
 
 
 **MIDDLE geometry
-
     **<Point>
     <LineString>
     <LinearRing>
@@ -141,6 +135,48 @@
     <gx:MultiTrack>
     <Model>
     <gx:Track>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <GroundOverlay id="ID">
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Overlay element -->
+  <color>ffffffff</color>                   <!-- kml:color -->
+  <drawOrder>0</drawOrder>                  <!-- int -->
+  <Icon>...</Icon>
+  <!-- specific to GroundOverlay -->
+  <altitude>0</altitude>                    <!-- double -->
+  <altitudeMode>clampToGround</altitudeMode>
+     <!-- kml:altitudeModeEnum: clampToGround or absolute -->
+     <!-- or, substitute gx:altitudeMode: clampToSeaFloor or relativeToSeaFloor -->
+  <LatLonBox>
+    <north>...</north>                      <! kml:angle90 -->
+    <south>...</south>                      <! kml:angle90 -->
+    <east>...</east>                        <! kml:angle180 -->
+    <west>...</west>                        <! kml:angle180 -->
+    <rotation>0</rotation>                  <! kml:angle180 -->
+  </LatLonBox>
+  <gx:LatLonQuad>
+    <coordinates>...</coordinates>          <!-- four lon,lat tuples -->
+  </gx:LatLonQuad>
+</GroundOverlay>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -302,6 +338,54 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
+**MIDDLE <PhotoOverlay>
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>            <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Overlay element -->
+  <color>ffffffff</color>               <!-- kml:color -->
+  <drawOrder>0</drawOrder>              <!-- int -->
+  <Icon>
+    <href>...</href>                    <!-- anyURI -->
+    ...
+  </Icon>
+  <!-- specific to PhotoOverlay -->
+  <rotation>0</rotation>                <!-- kml:angle180 -->
+  <ViewVolume>
+    <leftFov>0</leftFov>                <!-- kml:angle180 -->
+    <rightFov>0</rightFov>              <!-- kml:angle180 -->
+    <bottomFov>0</bottomFov>            <!-- kml:angle90 -->
+    <topFov>0</topFov>                  <!-- kml:angle90 -->
+    <near>0</near>                      <!-- double -->
+  </ViewVolume>
+  <ImagePyramid>
+    <tileSize>256</tileSize>            <!-- int -->
+    <maxWidth>...</maxWidth>            <!-- int -->
+    <maxHeight>...</maxHeight>          <!-- int -->
+    <gridOrigin>lowerLeft</gridOrigin> <!-- lowerLeft or upperLeft -->
+  </ImagePyramid>
+  <Point>
+    <coordinates>...</coordinates>      <!-- lon,lat[,alt] -->
+  </Point>
+  <shape>rectangle</shape>               <!-- kml:shape -->
+</PhotoOverlay>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
 
 ……**BOTTOM <Placemark id="ID">
   <!-- inherited from Feature element -->
@@ -444,6 +528,44 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
+**MIDDLE <ScreenOverlay id="ID">
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Overlay element -->
+  <color>ffffffff</color>                  <!-- kml:color -->
+  <drawOrder>0</drawOrder>                 <!-- int -->
+  <Icon>...</Icon>
+  <!-- specific to ScreenOverlay -->
+  <overlayXY x="double" y="double" xunits="fraction" yunits="fraction"/>
+    <!-- vec2 -->
+    <!-- xunits and yunits can be one of: fraction, pixels, or insetPixels -->
+  <screenXY x="double" y="double" xunits="fraction" yunits="fraction"/>
+    <!-- vec2 -->
+  <rotationXY x="double" y="double" xunits="fraction" yunits"fraction"/>
+    <!-- vec2 -->
+  <size x="double" y="double" xunits="fraction" yunits="fraction"/>
+    <!-- vec2 -->
+  <rotation>0</rotation>                   <!-- float -->
+ </ScreenOverlay>
+ # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+ 
+ 
 **MIDDLE <Style id="ID">
 <!-- extends StyleSelector -->
 <!-- specific to Style -->
@@ -472,7 +594,6 @@
   <begin>...</begin>     <!-- kml:dateTime -->
   <end>...</end>         <!-- kml:dateTime -->
 </TimeSpan>
-
     <Placemark>
       <name>Colorado</name>
       .
