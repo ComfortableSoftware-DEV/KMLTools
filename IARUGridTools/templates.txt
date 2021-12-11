@@ -1,18 +1,5 @@
 
 
-<!-- abstract element; do not create -->
-<!-- AbstractView -->                       <!-- Camera, LookAt -->
-  <!-- extends Object -->
-  <TimePrimitive>...</TimePrimitive>        <!-- gx:TimeSpan or gx:TimeStamp -->
-  <gx:ViewerOptions>
-    <gx:option name="" enabled=boolean />   <!-- name="streetview",
-                                                      "historicalimagery",
-                                                   or "sunlight" -->
-  </gx:ViewerOptions>
-<-- /AbstractView -->
-# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
-
-
 ……**MIDDLE	<altitudeMode>clampToGround</altitudeMode>
         <!-- kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute -->
         <!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor -->
@@ -48,7 +35,7 @@
   <!-- specific to Document -->
   **<!-- 0 or more Schema elements -->
   **<!-- 0 or more Feature elements -->
-**END </Document>
+……**END </Document>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -109,6 +96,16 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
+**MIDDLE <gx:FlyTo id="ID">
+  <gx:duration>0.0</gx:duration>         <!-- double -->
+  <gx:flyToMode>bounce</gx:flyToMode>    <!-- smooth or bounce -->
+  <!-- AbstractView -->                        <!-- Camera or LookAt -->
+    ...
+  <!-- /AbstractView -->
+</gx:FlyTo>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
 **MIDDLE <Folder id="ID">
   <!-- inherited from Feature element -->
   <name>...</name>                      <!-- string -->
@@ -131,6 +128,46 @@
   <!-- specific to Folder -->
   <!-- 0 or more Feature elements -->
 </Folder>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE geometry
+
+    **<Point>
+    <LineString>
+    <LinearRing>
+    **<Polygon>
+    <MultiGeometry>
+    <gx:MultiTrack>
+    <Model>
+    <gx:Track>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+** MIDDLE <LinearRing id="ID">
+  <!-- specific to LinearRing -->
+  <gx:altitudeOffset>0</gx:altitudeOffset>   <!-- double -->
+  <extrude>0</extrude>                       <!-- boolean -->
+  <tessellate>0</tessellate>                 <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+    <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+    <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <coordinates>...</coordinates>             <!-- lon,lat[,alt] tuples -->
+</LinearRing>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE<LineString id="ID">
+  <!-- specific to LineString -->
+  <gx:altitudeOffset>0</gx:altitudeOffset>  <!-- double -->
+  <extrude>0</extrude>                      <!-- boolean -->
+  <tessellate>0</tessellate>                <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+      <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+      <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <gx:drawOrder>0</gx:drawOrder>            <!-- integer -->
+  <coordinates>...</coordinates>            <!-- lon,lat[,alt] -->
+</LineString>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -158,6 +195,73 @@
         [terrainEnabled] - indicates whether the 3D viewer is showing terrain
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
+
+**MIDDLE <Model id="ID">
+  <!-- specific to Model -->
+  <altitudeMode>clampToGround</altitudeMode>
+      <!-- kml:altitudeModeEnum: clampToGround,relativeToGround,or absolute -->
+      <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <Location>
+    <longitude></longitude> <!-- kml:angle180 -->
+    <latitude></latitude>   <!-- kml:angle90 -->
+    <altitude>0</altitude>  <!-- double -->
+  </Location>
+  <Orientation>
+    <heading>0</heading>    <!-- kml:angle360 -->
+    <tilt>0</tilt>          <!-- kml:anglepos180 -->
+    <roll>0</roll>          <!-- kml:angle180 -->
+  </Orientation>
+  <Scale>
+    <x>1</x>                <!-- double -->
+    <y>1</y>                <!-- double -->
+    <z>1</z>                <!-- double -->
+  </Scale>
+  <Link>...</Link>
+  <ResourceMap>
+    <Alias>
+      <targetHref>...</targetHref>   <!-- anyURI -->
+      <sourceHref>...</sourceHref>   <!-- anyURI -->
+    </Alias>
+  </ResourceMap>
+</Model>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE MultiGeometry example
+<Placemark>
+  <name>SF Marina Harbor Master</name>
+  <visibility>0</visibility>
+  <MultiGeometry>
+    <LineString>
+      <!-- north wall -->
+      <coordinates>
+        -122.4425587930444,37.80666418607323,0
+        -122.4428379594768,37.80663578323093,0
+      </coordinates>
+    </LineString>
+    <LineString>
+      <!-- south wall -->
+      <coordinates>
+        -122.4425509770566,37.80662588061205,0
+        -122.4428340530617,37.8065999493009,0
+      </coordinates>
+    </LineString>
+  </MultiGeometry>
+</Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <gx:MultiTrack id="ID">
+  <!-- specific to MultiTrack -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <gx:interpolate>0<gx:interpolate>   <!-- boolean -->
+  <gx:Track>...</gx:Track>            <!-- one or more gx:Track elements -->
+</gx:MultiTrack>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
 ……<NetworkLink id="ID">
   <!-- inherited from Feature element --><name>...</name>                      <!-- string -->
   <visibility>1</visibility>            <!-- boolean -->
@@ -176,13 +280,11 @@
   <Region>...</Region>
   <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
   <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
-
   <!-- specific to NetworkLink -->
   <refreshVisibility>0</refreshVisibility> <!-- boolean -->
   <flyToView>0</flyToView>                 <!-- boolean -->
   <Link>...</Link>
 </NetworkLink>
-
     <NetworkLink>
       <name>NE US Radar</name>
       <flyToView>1</flyToView>
@@ -223,6 +325,68 @@
   <!-- specific to Placemark element -->
   <Geometry>...</Geometry>
 </Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE playlist, tour example
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>gx:AnimatedUpdate example</name>
+    <open>1</open>
+    <Style>
+      <IconStyle id="iconstyle">
+        <scale>1.0</scale>
+      </IconStyle>
+    </Style>
+    <Placemark id="mountainpin1">
+      <name>New Zealand's Southern Alps</name>
+      <styleUrl>#style</styleUrl>
+      <Point>
+        <coordinates>170.144,-43.605,0</coordinates>
+      </Point>
+    </Placemark>
+    <gx:Tour>
+      <name>Play me!</name>
+      <gx:Playlist>
+        <!-- The order and duration of TourPrimitives is important;
+             in this example, the AnimatedUpdate needs
+             6.5 seconds to complete. The FlyTo provides 4.1,
+             and the Wait 2.4, giving the update time to
+             complete before the Tour ends. AnimatedUpdates
+             don't hold Tours open, but FlyTos and Waits do.
+             For more information, refer to:
+             http://developers.google.com/kml/documentation/touring#tourtimelines
+        -->
+        <gx:AnimatedUpdate>
+          <gx:duration>6.5</gx:duration>
+          <Update>
+            <targetHref></targetHref>
+            <Change>
+                <IconStyle targetId="iconstyle">
+                  <scale>10.0</scale>
+                </IconStyle>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>
+        <gx:FlyTo>
+          <gx:duration>4.1</gx:duration>
+          <Camera>
+            <longitude>170.157</longitude>
+            <latitude>-43.671</latitude>
+            <altitude>9700</altitude>
+            <heading>-6.333</heading>
+            <tilt>33.5</tilt>
+            <roll>0</roll>
+          </Camera>
+        </gx:FlyTo>
+        <gx:Wait>
+          <gx:duration>2.4</gx:duration>  <!-- waiting for the AnimatedUpdate to complete -->
+        </gx:Wait>
+      </gx:Playlist>
+    </gx:Tour>
+  </Document>
+</kml>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -324,7 +488,52 @@
 **MIDDLE <TimeStamp id="ID">
   <when>...</when>      <!-- kml:dateTime -->
 </TimeStamp> 
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
+
+**MIDDLE <gx:Tour id="ID">
+  <name>...</name>
+  <description>...</description>
+  <gx:Playlist>
+
+    <!-- any number of gx:TourPrimitive elements -->
+
+  </gx:Playlist>
+</gx:Tour>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <gx:Track id="ID">
+  <!-- specific to Track -->
+  <altitudeMode>clampToGround</altitudeMode>
+      <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+      <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <when>...</when>                         <!-- kml:dateTime -->
+  <gx:coord>...</gx:coord>                 <!-- string -->
+  <gx:angles>...</gx:angles>               <!-- string -->
+  <Model>...</Model>
+  <ExtendedData>
+    <SchemaData schemaUrl="anyURI">
+      <gx:SimpleArrayData kml:name="string">
+        <gx:value>...</gx:value>            <!-- string -->
+      </gx:SimpleArrayData>
+    <SchemaData>
+  </ExtendedData>
+</gx:Track>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+E.G.:
+<gx:ViewerOptions>
+        <gx:option name="historicalimagery"></gx:option>
+        <gx:option enabled="0" name="sunlight"></gx:option>
+        <gx:option enabled="0" name="streetview"></gx:option>
+</gx:ViewerOptions>
+
+<gx:ViewerOptions>
+  <option> name=" " type="boolean">     <!-- name="streetview", "historicalimagery", "sunlight", or "groundnavigation" -->
+  </option>
+</gx:ViewerOptions>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
