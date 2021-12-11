@@ -133,12 +133,12 @@
         [terrainEnabled] - indicates whether the 3D viewer is showing terrain
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
-<NetworkLink id="ID">
+……<NetworkLink id="ID">
   <!-- inherited from Feature element --><name>...</name>                      <!-- string -->
   <visibility>1</visibility>            <!-- boolean -->
   <open>0</open>                        <!-- boolean -->
   <atom:author>...<atom:author>         <!-- xmlns:atom -->
-   <atom:link href=" "/>               <!-- xmlns:atom -->
+  <atom:link href=" "/>               <!-- xmlns:atom -->
   <address>...</address>                <!-- string -->
   <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
   <phoneNumber>...</phoneNumber>        <!-- string -->
@@ -201,7 +201,7 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
-**MIDDLE <Point id="ID">
+……**MIDDLE <Point id="ID">
   <!-- specific to Point -->
   <extrude>0</extrude>                        <!-- boolean -->
   <altitudeMode>clampToGround</altitudeMode>
