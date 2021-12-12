@@ -33,6 +33,7 @@
     closeDeletedFileTabs: true
     disabledPackages: [
       "archive-view"
+      "atom-html-preview"
       "buildium"
       "Chromo-Color-Previews"
       "image-view"
@@ -68,7 +69,7 @@
       "package-generator"
       "script"
       "spell-check"
-      "atom-html-preview"
+      "xml-formatter"
     ]
     followSymlinks: false
     ignoredNames: [
@@ -118,8 +119,8 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-    softTabs: false
-    tabType: "hard"
+    softTabs: true
+    tabType: "soft"
   "exception-reporting":
     userId: "b54d002a-ce1e-4540-8755-e5d954f2ce78"
   "file-watcher":
@@ -344,9 +345,9 @@
     showInvisibles: true
     softWrap: false
     tabLength: 2
-    tabType: "hard"
+    tabType: "soft"
   "tabs-to-spaces":
-    onSave: "tabify"
+    onSave: "untabify"
 ".litcoffee.source":
   editor:
     autoIndentOnPaste: false
@@ -377,9 +378,9 @@
     showInvisibles: true
     softWrap: false
     tabLength: 2
-    tabType: "hard"
+    tabType: "soft"
   "tabs-to-spaces":
-    onSave: "tabify"
+    onSave: "untabify"
 ".python.text.traceback":
   editor:
     autoIndentOnPaste: false
@@ -387,7 +388,7 @@
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
-    tabType: "hard"
+    tabType: "soft"
 ".text":
   editor:
     softWrap: true
