@@ -1,16 +1,16 @@
 
 
-……**MIDDLE	<altitudeMode>clampToGround</altitudeMode>
+……**MIDDLE  <altitudeMode>clampToGround</altitudeMode>
         <!-- kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute -->
         <!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor -->
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
 ……**TOP <?xml version="1.0" encoding="UTF-8"?>
-<kml 
-  xmlns="http://www.opengis.net/kml/2.2" 
-  xmlns:gx="http://www.google.com/kml/ext/2.2" 
-  xmlns:kml="http://www.opengis.net/kml/2.2" 
+<kml
+  xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:gx="http://www.google.com/kml/ext/2.2"
+  xmlns:kml="http://www.opengis.net/kml/2.2"
   xmlns:atom="http://www.w3.org/2005/Atom"
 >
 ……<Document id="ID">
@@ -60,11 +60,11 @@
   <altitudeMode>clampToGround</altitudeMode>
         <!-- kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute -->
         <!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor -->
-</Camera> 
+</Camera>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
-**MIDDLE <ExtendedData>                       
+**MIDDLE <ExtendedData>
   <Data name="string">
     <displayName>...</displayName>    <!-- string -->
     <value>...</value>                <!-- string -->
@@ -334,7 +334,7 @@
           [lookatLon],[lookatLat],[lookatRange],[lookatTilt],[lookatHeading];VIEW=\
           [horizFov],[vertFov],[horizPixels],[vertPixels],[terrainEnabled]</viewFormat>
       </Link>
-    </NetworkLink> 
+    </NetworkLink>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -506,7 +506,7 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
-**MIDDLE <Region id="ID"> 
+**MIDDLE <Region id="ID">
   <LatLonAltBox>
     <north></north>                            <!-- required; kml:angle90 -->
     <south></south>                            <!-- required; kml:angle90 -->
@@ -524,7 +524,7 @@
     <minFadeExtent>0</minFadeExtent>           <!-- float -->
     <maxFadeExtent>0</maxFadeExtent>           <!-- float -->
   </Lod>
-</Region> 
+</Region>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -564,8 +564,8 @@
   <rotation>0</rotation>                   <!-- float -->
  </ScreenOverlay>
  # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
- 
- 
+
+
 **MIDDLE <Style id="ID">
 <!-- extends StyleSelector -->
 <!-- specific to Style -->
@@ -608,7 +608,7 @@
 
 **MIDDLE <TimeStamp id="ID">
   <when>...</when>      <!-- kml:dateTime -->
-</TimeStamp> 
+</TimeStamp>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 

@@ -105,6 +105,7 @@
     useTreeSitterParsers: false
   "custom-folds":
     areRegionsFoldedOnLoad: true
+    areRegionsHighlighted: true
     postfix_0: "fold here ⟰1⟰1⟰1"
     postfix_1: "fold here ⟰2⟰2⟰2"
     postfix_2: "fold here ⟰3⟰3⟰3"
