@@ -1,3 +1,6 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+[NOTES](./NOTES.md)
+
+[MAIDENHEAD CLASS](maidenhead_C.md)
+[MAKE KML CLASS](./makeKML_C.md)

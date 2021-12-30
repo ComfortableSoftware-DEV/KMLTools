@@ -127,14 +127,14 @@
 
 
 **MIDDLE geometry
-    **<Point>
-    <LineString>
-    <LinearRing>
-    **<Polygon>
-    <MultiGeometry>
     <gx:MultiTrack>
-    <Model>
     <gx:Track>
+    <LinearRing>
+    <LineString>
+    <Model>
+    <MultiGeometry>
+    <Point>
+    <Polygon>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
@@ -180,6 +180,22 @@
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 
+<IconStyle id="ID">
+  <!-- inherited from ColorStyle -->
+  <color>ffffffff</color>            <!-- kml:color -->
+  <colorMode>normal</colorMode>      <!-- kml:colorModeEnum:normal or random -->
+  <!-- specific to IconStyle -->
+  <scale>1</scale>                   <!-- float -->
+  <heading>0</heading>               <!-- float -->
+  <Icon>
+    <href>...</href>
+  </Icon>
+  <hotSpot x="0.5"  y="0.5"
+    xunits="fraction" yunits="fraction"/>    <!-- kml:vec2 -->
+</IconStyle>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
 ** MIDDLE <LinearRing id="ID">
   <!-- specific to LinearRing -->
   <gx:altitudeOffset>0</gx:altitudeOffset>   <!-- double -->
@@ -204,6 +220,21 @@
   <gx:drawOrder>0</gx:drawOrder>            <!-- integer -->
   <coordinates>...</coordinates>            <!-- lon,lat[,alt] -->
 </LineString>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <LineStyle id="ID">
+  <!-- inherited from ColorStyle -->
+  <color>ffffffff</color>            <!-- kml:color -->
+  <colorMode>normal</colorMode>      <!-- colorModeEnum: normal or random -->
+
+  <!-- specific to LineStyle -->
+  <width>1</width>                            <!-- float -->
+  <gx:outerColor>ffffffff</gx:outerColor>     <!-- kml:color -->
+  <gx:outerWidth>0.0</gx:outerWidth>          <!-- float -->
+  <gx:physicalWidth>0.0</gx:physicalWidth>    <!-- float -->
+  <gx:labelVisibility>0</gx:labelVisibility>  <!-- boolean -->
+</LineStyle>
 # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
 
 

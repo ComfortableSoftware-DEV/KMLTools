@@ -1,154 +1,33 @@
 
 
-  - RNDLEN: The length of random string used for ID and name where defaulted to random strings.
+# makeKML_C
+  - ## \_\_init\_\_ self, *,
+    - Initialize the class.
+    - ### fileName_=None,
+      - Will write a file if this name is valid.
+      - You need to get a copy of self.STR_TO_RETURN before the class is destroyed if you are not writing a file.
+      - #### self.FILENAME
+        - A copy of the fileName_ given on entry.
+      - #### self.STR_TO_RETURN
+        - The string built by this class, read it before \_\_exit\_\_ is called if you are not writing KML to a file.
+        - If the filename is valid this string will be written to self.FILENAME when \_\_exit\_\_ is called.
+      - #### self.ROOT_TAB_LEVEL
+        - The current tab level of the file when you are using the defaults, not returning strings from document and folder and networkLink containers.
+      - #### self.STATUS_LIST
+        - Should contain the current container type, items are added when self.document\(\) or self.folder\(\) or self.networkLink\(\) are called
+  - ## \_\_enter\_\_ self.STR_TO_RETURN
+    - Returns self.
+  - ## \_\_exit\_\_ self, *args
+    - Writes self.STR_TO_RETURN to self.FILENAME, no error checking.
+  - ## altitudeMode_R self, *,
+    - Returns a string containing an altitude mode.
+    - Only the first mode in alphabetical order will be returned.
+      - ### absolute_=False,
+      - ### clampToGround_=False,  # default by else:
+      - ### clampToSeaFloor_=False,
+      - ### numTabs_=None,
+      - ### relativeToGround_=False,
+      - ### relativeToSeaFloor_=False,
 
-  - #### self.__init__
-    - ##### fileName_=Nonem
-  - #### self.__enter__:
-  - #### self.__exit__:
-    - ##### *args,
-  - #### self.altitudeMode:
-    - ##### absolute_=False,
-    - ##### clampToGround_=False,  # default by else:
-    - ##### clampToSeaFloor_=False,
-    - ##### numTabs_=2,
-    - ##### relativeToGround_=False,
-    - ##### relativeToSeaFloor_=False,
-  - #### self.authorEntry
-    - ##### authorName_=None,  # if None is sent will use a random string
-    - ##### numTabs_=None,
-  - #### self.camera
-    - ##### altitude_=0,
-    - ##### altitudeMode_=None,  # premake
-    - ##### heading_=0,
-    - ##### ID_=None,
-    - ##### latitude_=0,
-    - ##### longitude_=0,
-    - ##### numTabs_=None,
-    - ##### roll_=0,
-    - ##### tilt_=0,
-    - ##### timePrimitive_=None,  # premake timeSpan or timeStamp
-    - ##### viewerOptions_=None,  # premake
-  - #### self.decTabLvl
-  - #### self.description
-    - ##### descriptionText_="",
-    - ##### isCDATA_=False,
-    - ##### numTabs_=None,
-  - #### self.documentEnd
-    - ##### numTabs_=None,
-  - #### self.documentTop
-    - ##### address_=None,
-    - ##### authorEntry_=None,  # premake
-    - ##### description_=None,  # premake
-    - ##### isOpen_=None,
-    - ##### isVisible_=None,
-    - ##### link_=None,  # premake
-    - ##### name_=None,  # sending any known empty string will default to a random string of RNDLEN characters "*" will default to self.FILENAME
-    - ##### numTabs_=None,
-    - ##### phoneNumber_=None,
-    - ##### returnString_=False,
-    - ##### snippet_=None,  # premake
-    - ##### snippetMaxLines_=2,
-    - ##### timePrimitive_=None,  # premake TimeSpan or TimeStamp
-    - ##### view_=None,  # premake point or polygon
-  - #### self.extendedData
-    - ##### myData_=[(None, None)],
-    - ##### numTabs_=None,
-  - #### self.folderEnd
-    - ##### numTabs_=None,
-  - #### self.folderTop
-    - ##### abstractView_=None,  # premake camera or lookat
-    - ##### address_=None,
-    - ##### addressDetails_=None,
-    - ##### authorEntry_=None,  # premake
-    - ##### description_=None,  # premake
-    - ##### extendedData_=None,  # premake
-    - ##### ID_=None,
-    - ##### isOpen_=None,
-    - ##### isVisible_=None,
-    - ##### name_=None,
-    - ##### numTabs_=None,
-    - ##### phoneNumber_=None,
-    - ##### region_=None,  # premake
-    - ##### snippet_=None,  # premake
-    - ##### styleSelector_=None,  # premake
-    - ##### styleUrl_=None,
-    - ##### timePrimitive_=None,  # premake timeSpan or timeStamp
-  - #### self.incTabLvl
-  - #### self.link
-    - ##### href_=None,
-    - ##### httpQuery_=None,  # premake
-    - ##### ID_=None,
-    - ##### numTabs_=None,
-    - ##### refreshInterval_=None,
-    - ##### refreshMode_=None,  # onChange onInterval onExpire
-    - ##### viewBoundScale_=None,
-    - ##### viewFormat_=None,  # premake
-    - ##### viewRefreshMode_=None,  # never, onStop, onRequest, onRegion
-    - ##### viewRefreshTime_=None,
-  - #### self.lookat
-  - #### self.makeCoordinateList
-    - ##### coordinatesList_=[(None, None, None)]
-    - ##### numTabs_=None,
-  - #### self.networkLink
-    - ##### abstractView_=None,  # premake camera or lookat
-    - ##### address_=None,
-    - ##### addressDetails_=None,
-    - ##### authorEntry_=None,  # premake
-    - ##### description_=None,  # premake
-    - ##### extendedData_=None,  # premake
-    - ##### ID_=None,
-    - ##### isOpen_=0,
-    - ##### isVisible_=1,
-    - ##### numTabs_=None,
-    - ##### phoneNumber_=None,
-    - ##### region_=None,  # premake
-    - ##### snippet_=None,  # premake
-    - ##### snippetMaxLines_=2,
-    - ##### styleSelector_=None,
-    - ##### styleUrl_=None,
-    - ##### timePrimitive_=None,  # premake TimeSpan or TimeStamp
-  - #### self.placemark
-    - ##### abstractView_=None,  # premake LookAt or Camera
-    - ##### address_=None,
-    - ##### authorEntry_=None,  # premake
-    - ##### description_=None,  # premake
-    - ##### extendedData_=None,  # premake
-    - ##### geometry_=None,  # premake point or polygon
-    - ##### ID_=None,
-    - ##### isOpen_=None,  # send None if the inherited value is wanted
-    - ##### isVisible_=None,  # send None if the inherited value is wanted
-    - ##### link_=None,  # premake
-    - ##### name_=None,  # if None is sent makes a RNDLEN random string
-    - ##### numTabs_=None,
-    - ##### phoneNumber_=None,
-    - ##### region_=None,  # premake
-    - ##### RNDLEN=10,
-    - ##### snippet_=None,  # premake
-    - ##### snippetMaxLines_=2,
-    - ##### styleSelector_=None,  # premake Style or StyleMap
-    - ##### styleUrl_=None,
-    - ##### timePrimitive_=None,  # premake TimeStamp or TimeSpan
-  - #### self.point
-    - ##### altitude_=0,
-    - ##### altitudeMode_=None,  # premake
-    - ##### extrude_=None,
-    - ##### ID_=None,
-    - ##### latitude_=0,
-    - ##### longitude_=0,
-    - ##### numTabs_=None,
-  - #### self.polygon
-    - ##### altitudeMode_=None,  # premake
-    - ##### extrude_=None,
-    - ##### ID_=None,
-    - ##### innerBoundaryList_=[(None, None, None)],
-    - ##### numTabs_=None,
-    - ##### outerBoundaryList_=[(None, None, None)],
-    - ##### tessellate_=None,
-  - #### self.region
-  - #### self.snippet
-  - #### self.style
-  - #### self.styleSelector
-  - #### self.timeSpan
-  - #### self.timeStamp
-  - #### self.viewerOptions
+
+#
