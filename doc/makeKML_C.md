@@ -21,13 +21,26 @@
     - Writes self.STR_TO_RETURN to self.FILENAME, no error checking.
   - ## altitudeMode_R self, *,
     - Returns a string containing an altitude mode.
-    - Only the first mode in alphabetical order will be returned.
-      - ### absolute_=False,
-      - ### clampToGround_=False,  # default by else:
-      - ### clampToSeaFloor_=False,
-      - ### numTabs_=None,
-      - ### relativeToGround_=False,
-      - ### relativeToSeaFloor_=False,
+    - Accounts for gx: modes.
+    - Defaults to clampToGround.
+    - Only the first mode found will be returned.
+      1. relativeToGround
+      2. clampToGround
+      3. absolute
+      4. clampToSeaFloor
+      5. relativeToSeaFloor
+      - ### absolute_=False
+        - The altitude value will be interpreted by GE as meters above sea level.
+      - ### clampToGround_=False  ***NOTE*** default by else.
+        - For a camera, this setting also places the camera relativeToGround, since putting the camera exactly at terrain height would mean that the eye would intersect the terrain \(and the view would be blocked\).
+        - Camera items will change this to relativeToGround automatically, a camera clamped to ground would see only the ground the camera is clamped to, nothing else.
+      - ### clampToSeaFloor_=False
+        - Altitude value is ignored and will be set to local sea floor, relativeToSeaFloor for camera items.
+      - ### numTabs_=None
+        - The number of tabs to put in front of the tag starting and ending tag lines, will auto adjust internally if needed.
+      - ### relativeToGround_=False
+        - Interprets the <altitude> as a value in meters above the ground. If the point is over water, the <altitude> will be interpreted as a value in meters above sea level. See <gx:altitudeMode> below to specify points relative to the sea floor.
+      - ### relativeToSeaFloor_=False
 
 
 #
