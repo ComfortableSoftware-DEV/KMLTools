@@ -1,0 +1,738 @@
+
+
+……**MIDDLE  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute -->
+        <!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor -->
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+……**TOP <?xml version="1.0" encoding="UTF-8"?>
+<kml
+  xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:gx="http://www.google.com/kml/ext/2.2"
+  xmlns:kml="http://www.opengis.net/kml/2.2"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+>
+……<Document id="ID">
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                 <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  **<AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  **<TimePrimitive>...</TimePrimitive>
+  **<styleUrl>...</styleUrl>              <!-- anyURI -->
+  **<StyleSelector>...</StyleSelector>
+  **<Region>...</Region>
+  **<Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  **<ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- specific to Document -->
+  **<!-- 0 or more Schema elements -->
+  **<!-- 0 or more Feature elements -->
+……**END </Document>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+……**MIDDLE <Camera id="ID">
+  <!-- inherited from AbstractView element -->
+  <TimePrimitive>...</TimePrimitive>  <!-- gx:TimeSpan or gx:TimeStamp -->
+  <gx:ViewerOptions>
+    <option> name=" " type="boolean">     <!-- name="streetview", "historicalimagery", "sunlight", or "groundnavigation" -->
+    </option>
+  <gx:ViewerOptions>
+    <gx:option name="historicalimagery"></gx:option>
+    <gx:option enabled="0" name="sunlight"></gx:option>
+    <gx:option enabled="0" name="streetview"></gx:option>
+  </gx:ViewerOptions>
+  <!-- specific to Camera -->
+  <longitude>0</longitude>            <!-- kml:angle180 -->
+  <latitude>0</latitude>              <!-- kml:angle90 -->
+  <altitude>0</altitude>              <!-- double -->
+  <heading>0</heading>                <!-- kml:angle360 -->
+  <tilt>0</tilt>                      <!-- kml:anglepos180 -->
+  <roll>0</roll>                      <!-- kml:angle180 -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: relativeToGround, clampToGround, or absolute -->
+        <!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor -->
+</Camera>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <ExtendedData>
+  <Data name="string">
+    <displayName>...</displayName>    <!-- string -->
+    <value>...</value>                <!-- string -->
+  </Data>
+  <SchemaData schemaUrl="anyURI">
+    <SimpleData name=""> ... </SimpleData>   <!-- string -->
+  </SchemaData>
+  <namespace_prefix:other>...</namespace_prefix:other>
+</ExtendedData>
+    <Placemark>
+      <name>Club house</name>
+      <ExtendedData>
+        <Data name="holeNumber">
+          <value>1</value>
+        </Data>
+        <Data name="holeYardage">
+          <value>234</value>
+        </Data>
+        <Data name="holePar">
+          <value>4</value>
+        </Data>
+      </ExtendedData>
+    </Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <gx:FlyTo id="ID">
+  <gx:duration>0.0</gx:duration>         <!-- double -->
+  <gx:flyToMode>bounce</gx:flyToMode>    <!-- smooth or bounce -->
+  <!-- AbstractView -->                        <!-- Camera or LookAt -->
+    ...
+  <!-- /AbstractView -->
+</gx:FlyTo>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <Folder id="ID">
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>            <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>
+  <!-- specific to Folder -->
+  <!-- 0 or more Feature elements -->
+</Folder>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE geometry
+    <gx:MultiTrack>
+    <gx:Track>
+    <LinearRing>
+    <LineString>
+    <Model>
+    <MultiGeometry>
+    <Point>
+    <Polygon>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <GroundOverlay id="ID">
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Overlay element -->
+  <color>ffffffff</color>                   <!-- kml:color -->
+  <drawOrder>0</drawOrder>                  <!-- int -->
+  <Icon>...</Icon>
+  <!-- specific to GroundOverlay -->
+  <altitude>0</altitude>                    <!-- double -->
+  <altitudeMode>clampToGround</altitudeMode>
+     <!-- kml:altitudeModeEnum: clampToGround or absolute -->
+     <!-- or, substitute gx:altitudeMode: clampToSeaFloor or relativeToSeaFloor -->
+  <LatLonBox>
+    <north>...</north>                      <! kml:angle90 -->
+    <south>...</south>                      <! kml:angle90 -->
+    <east>...</east>                        <! kml:angle180 -->
+    <west>...</west>                        <! kml:angle180 -->
+    <rotation>0</rotation>                  <! kml:angle180 -->
+  </LatLonBox>
+  <gx:LatLonQuad>
+    <coordinates>...</coordinates>          <!-- four lon,lat tuples -->
+  </gx:LatLonQuad>
+</GroundOverlay>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+<IconStyle id="ID">
+  <!-- inherited from ColorStyle -->
+  <color>ffffffff</color>            <!-- kml:color -->
+  <colorMode>normal</colorMode>      <!-- kml:colorModeEnum:normal or random -->
+  <!-- specific to IconStyle -->
+  <scale>1</scale>                   <!-- float -->
+  <heading>0</heading>               <!-- float -->
+  <Icon>
+    <href>...</href>
+  </Icon>
+  <hotSpot x="0.5"  y="0.5"
+    xunits="fraction" yunits="fraction"/>    <!-- kml:vec2 -->
+</IconStyle>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+** MIDDLE <LinearRing id="ID">
+  <!-- specific to LinearRing -->
+  <gx:altitudeOffset>0</gx:altitudeOffset>   <!-- double -->
+  <extrude>0</extrude>                       <!-- boolean -->
+  <tessellate>0</tessellate>                 <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+    <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+    <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <coordinates>...</coordinates>             <!-- lon,lat[,alt] tuples -->
+</LinearRing>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE<LineString id="ID">
+  <!-- specific to LineString -->
+  <gx:altitudeOffset>0</gx:altitudeOffset>  <!-- double -->
+  <extrude>0</extrude>                      <!-- boolean -->
+  <tessellate>0</tessellate>                <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+      <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+      <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <gx:drawOrder>0</gx:drawOrder>            <!-- integer -->
+  <coordinates>...</coordinates>            <!-- lon,lat[,alt] -->
+</LineString>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <LineStyle id="ID">
+  <!-- inherited from ColorStyle -->
+  <color>ffffffff</color>            <!-- kml:color -->
+  <colorMode>normal</colorMode>      <!-- colorModeEnum: normal or random -->
+
+  <!-- specific to LineStyle -->
+  <width>1</width>                            <!-- float -->
+  <gx:outerColor>ffffffff</gx:outerColor>     <!-- kml:color -->
+  <gx:outerWidth>0.0</gx:outerWidth>          <!-- float -->
+  <gx:physicalWidth>0.0</gx:physicalWidth>    <!-- float -->
+  <gx:labelVisibility>0</gx:labelVisibility>  <!-- boolean -->
+</LineStyle>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+……**MIDDLE <Link id="ID">
+  <!-- specific to Link -->
+  <href>...</href>                      <!-- string -->
+  <refreshMode>onChange</refreshMode>
+    <!-- refreshModeEnum: onChange, onInterval, or onExpire -->
+  <refreshInterval>4</refreshInterval>  <!-- float -->
+  <viewRefreshMode>never</viewRefreshMode>
+    <!-- viewRefreshModeEnum: never, onStop, onRequest, onRegion -->
+  <viewRefreshTime>4</viewRefreshTime>  <!-- float -->
+  <viewBoundScale>1</viewBoundScale>    <!-- float -->
+  <viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]</viewFormat>
+                                        <!-- string -->
+  <httpQuery>...</httpQuery>            <!-- string -->
+</Link>
+        Additional viewFormat strings
+        [lookatLon], [lookatLat] - longitude and latitude of the point that <LookAt> is viewing
+        [lookatRange], [lookatTilt], [lookatHeading] - values used by the <LookAt> element (see descriptions of <range>, <tilt>, and <heading> in <LookAt>)
+        [lookatTerrainLon], [lookatTerrainLat], [lookatTerrainAlt] - point on the terrain in degrees/meters that <LookAt> is viewing
+        [cameraLon], [cameraLat], [cameraAlt] - degrees/meters of the eyepoint for the camera
+        [horizFov], [vertFov] - horizontal, vertical field of view for the camera
+        [horizPixels], [vertPixels] - size in pixels of the 3D viewer
+        [terrainEnabled] - indicates whether the 3D viewer is showing terrain
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <LookAt id="ID">
+  <!-- inherited from AbstractView element -->
+  <TimePrimitive>...</TimePrimitive>  <!-- gx:TimeSpan or gx:TimeStamp -->
+  <gx:ViewerOptions>
+    <option> name=" " type="boolean">     <!-- name="streetview", "historicalimagery", "sunlight", or "groundnavigation" -->
+    </option>
+  </gx:ViewerOptions>
+
+  <!-- specific to LookAt -->
+  <longitude>0</longitude>            <!-- kml:angle180 -->
+  <latitude>0</latitude>              <!-- kml:angle90 -->
+  <altitude>0</altitude>              <!-- double -->
+  <heading>0</heading>                <!-- kml:angle360 -->
+  <tilt>0</tilt>                      <!-- kml:anglepos90 -->
+  <range></range>                     <!-- double -->
+  <altitudeMode>clampToGround</altitudeMode>
+          <!--kml:altitudeModeEnum:clampToGround, relativeToGround, absolute -->
+          <!-- or, gx:altitudeMode can be substituted: clampToSeaFloor, relativeToSeaFloor -->
+
+</LookAt>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+xmlns:gx="http://www.google.com/kml/ext/2.2">
+
+  <Placemark>
+    <name>LookAt.kml</name>
+    <LookAt>
+      <gx:TimeStamp>
+        <when>1994</when>
+      </gx:TimeStamp>
+      <longitude>-122.363</longitude>
+      <latitude>37.81</latitude>
+      <altitude>2000</altitude>
+      <range>500</range>
+      <tilt>45</tilt>
+      <heading>0</heading>
+      <altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+    <Point>
+      <coordinates>-122.363,37.82,0</coordinates>
+    </Point>
+  </Placemark>
+</kml>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <Model id="ID">
+  <!-- specific to Model -->
+  <altitudeMode>clampToGround</altitudeMode>
+      <!-- kml:altitudeModeEnum: clampToGround,relativeToGround,or absolute -->
+      <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <Location>
+    <longitude></longitude> <!-- kml:angle180 -->
+    <latitude></latitude>   <!-- kml:angle90 -->
+    <altitude>0</altitude>  <!-- double -->
+  </Location>
+  <Orientation>
+    <heading>0</heading>    <!-- kml:angle360 -->
+    <tilt>0</tilt>          <!-- kml:anglepos180 -->
+    <roll>0</roll>          <!-- kml:angle180 -->
+  </Orientation>
+  <Scale>
+    <x>1</x>                <!-- double -->
+    <y>1</y>                <!-- double -->
+    <z>1</z>                <!-- double -->
+  </Scale>
+  <Link>...</Link>
+  <ResourceMap>
+    <Alias>
+      <targetHref>...</targetHref>   <!-- anyURI -->
+      <sourceHref>...</sourceHref>   <!-- anyURI -->
+    </Alias>
+  </ResourceMap>
+</Model>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE MultiGeometry example
+<Placemark>
+  <name>SF Marina Harbor Master</name>
+  <visibility>0</visibility>
+  <MultiGeometry>
+    <LineString>
+      <!-- north wall -->
+      <coordinates>
+        -122.4425587930444,37.80666418607323,0
+        -122.4428379594768,37.80663578323093,0
+      </coordinates>
+    </LineString>
+    <LineString>
+      <!-- south wall -->
+      <coordinates>
+        -122.4425509770566,37.80662588061205,0
+        -122.4428340530617,37.8065999493009,0
+      </coordinates>
+    </LineString>
+  </MultiGeometry>
+</Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <gx:MultiTrack id="ID">
+  <!-- specific to MultiTrack -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <gx:interpolate>0<gx:interpolate>   <!-- boolean -->
+  <gx:Track>...</gx:Track>            <!-- one or more gx:Track elements -->
+</gx:MultiTrack>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <NetworkLink id="ID">
+  <!-- inherited from Feature element --><name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>               <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- specific to NetworkLink -->
+  <refreshVisibility>0</refreshVisibility> <!-- boolean -->
+  <flyToView>0</flyToView>                 <!-- boolean -->
+  <Link>...</Link>
+</NetworkLink>
+#
+    <NetworkLink>
+      <name>NE US Radar</name>
+      <flyToView>1</flyToView>
+      <Link>
+        <href>http://www.example.com/geotiff/NE/MergedReflectivityQComposite.kml</href>
+        <refreshMode>onInterval</refreshMode>
+        <refreshInterval>30</refreshInterval>
+        <viewRefreshMode>onStop</viewRefreshMode>
+        <viewRefreshTime>7</viewRefreshTime>
+        <viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth];CAMERA=\
+          [lookatLon],[lookatLat],[lookatRange],[lookatTilt],[lookatHeading];VIEW=\
+          [horizFov],[vertFov],[horizPixels],[vertPixels],[terrainEnabled]</viewFormat>
+      </Link>
+    </NetworkLink>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <PhotoOverlay>
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>            <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Overlay element -->
+  <color>ffffffff</color>               <!-- kml:color -->
+  <drawOrder>0</drawOrder>              <!-- int -->
+  <Icon>
+    <href>...</href>                    <!-- anyURI -->
+    ...
+  </Icon>
+  <!-- specific to PhotoOverlay -->
+  <rotation>0</rotation>                <!-- kml:angle180 -->
+  <ViewVolume>
+    <leftFov>0</leftFov>                <!-- kml:angle180 -->
+    <rightFov>0</rightFov>              <!-- kml:angle180 -->
+    <bottomFov>0</bottomFov>            <!-- kml:angle90 -->
+    <topFov>0</topFov>                  <!-- kml:angle90 -->
+    <near>0</near>                      <!-- double -->
+  </ViewVolume>
+  <ImagePyramid>
+    <tileSize>256</tileSize>            <!-- int -->
+    <maxWidth>...</maxWidth>            <!-- int -->
+    <maxHeight>...</maxHeight>          <!-- int -->
+    <gridOrigin>lowerLeft</gridOrigin> <!-- lowerLeft or upperLeft -->
+  </ImagePyramid>
+  <Point>
+    <coordinates>...</coordinates>      <!-- lon,lat[,alt] -->
+  </Point>
+  <shape>rectangle</shape>               <!-- kml:shape -->
+</PhotoOverlay>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+……**BOTTOM <Placemark id="ID">
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- specific to Placemark element -->
+  <Geometry>...</Geometry>
+</Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE playlist, tour example
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>gx:AnimatedUpdate example</name>
+    <open>1</open>
+    <Style>
+      <IconStyle id="iconstyle">
+        <scale>1.0</scale>
+      </IconStyle>
+    </Style>
+    <Placemark id="mountainpin1">
+      <name>New Zealand's Southern Alps</name>
+      <styleUrl>#style</styleUrl>
+      <Point>
+        <coordinates>170.144,-43.605,0</coordinates>
+      </Point>
+    </Placemark>
+    <gx:Tour>
+      <name>Play me!</name>
+      <gx:Playlist>
+        <!-- The order and duration of TourPrimitives is important;
+             in this example, the AnimatedUpdate needs
+             6.5 seconds to complete. The FlyTo provides 4.1,
+             and the Wait 2.4, giving the update time to
+             complete before the Tour ends. AnimatedUpdates
+             don't hold Tours open, but FlyTos and Waits do.
+             For more information, refer to:
+             http://developers.google.com/kml/documentation/touring#tourtimelines
+        -->
+        <gx:AnimatedUpdate>
+          <gx:duration>6.5</gx:duration>
+          <Update>
+            <targetHref></targetHref>
+            <Change>
+                <IconStyle targetId="iconstyle">
+                  <scale>10.0</scale>
+                </IconStyle>
+            </Change>
+          </Update>
+        </gx:AnimatedUpdate>
+        <gx:FlyTo>
+          <gx:duration>4.1</gx:duration>
+          <Camera>
+            <longitude>170.157</longitude>
+            <latitude>-43.671</latitude>
+            <altitude>9700</altitude>
+            <heading>-6.333</heading>
+            <tilt>33.5</tilt>
+            <roll>0</roll>
+          </Camera>
+        </gx:FlyTo>
+        <gx:Wait>
+          <gx:duration>2.4</gx:duration>  <!-- waiting for the AnimatedUpdate to complete -->
+        </gx:Wait>
+      </gx:Playlist>
+    </gx:Tour>
+  </Document>
+</kml>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+……**MIDDLE <Point id="ID">
+  <!-- specific to Point -->
+  <extrude>0</extrude>                        <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <coordinates>...</coordinates>              <!-- lon,lat[,alt] -->
+</Point>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+……**MIDDLE <Polygon id="ID">
+  <!-- specific to Polygon -->
+  <extrude>0</extrude>                       <!-- boolean -->
+  <tessellate>0</tessellate>                 <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <outerBoundaryIs>
+    <LinearRing>
+      <coordinates>...</coordinates>         <!-- lon,lat[,alt] -->
+    </LinearRing>
+  </outerBoundaryIs>
+  <innerBoundaryIs>
+    <LinearRing>
+      <coordinates>...</coordinates>         <!-- lon,lat[,alt] -->
+    </LinearRing>
+  </innerBoundaryIs>
+</Polygon>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <Region id="ID">
+  <LatLonAltBox>
+    <north></north>                            <!-- required; kml:angle90 -->
+    <south></south>                            <!-- required; kml:angle90 -->
+    <east></east>                              <!-- required; kml:angle180 -->
+    <west></west>                              <!-- required; kml:angle180 -->
+    <minAltitude>0</minAltitude>               <!-- float -->
+    <maxAltitude>0</maxAltitude>               <!-- float -->
+    <altitudeMode>clampToGround</altitudeMode>
+        <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+        <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  </LatLonAltBox>
+  <Lod>
+    <minLodPixels>0</minLodPixels>             <!-- float -->
+    <maxLodPixels>-1</maxLodPixels>            <!-- float -->
+    <minFadeExtent>0</minFadeExtent>           <!-- float -->
+    <maxFadeExtent>0</maxFadeExtent>           <!-- float -->
+  </Lod>
+</Region>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <ScreenOverlay id="ID">
+  <!-- inherited from Feature element -->
+  <name>...</name>                      <!-- string -->
+  <visibility>1</visibility>            <!-- boolean -->
+  <open>0</open>                        <!-- boolean -->
+  <atom:author>...<atom:author>         <!-- xmlns:atom -->
+  <atom:link href=" "/>                <!-- xmlns:atom -->
+  <address>...</address>                <!-- string -->
+  <xal:AddressDetails>...</xal:AddressDetails>  <!-- xmlns:xal -->
+  <phoneNumber>...</phoneNumber>        <!-- string -->
+  <Snippet maxLines="2">...</Snippet>   <!-- string -->
+  <description>...</description>        <!-- string -->
+  <AbstractView>...</AbstractView>      <!-- Camera or LookAt -->
+  <TimePrimitive>...</TimePrimitive>
+  <styleUrl>...</styleUrl>              <!-- anyURI -->
+  <StyleSelector>...</StyleSelector>
+  <Region>...</Region>
+  <Metadata>...</Metadata>              <!-- deprecated in KML 2.2 -->
+  <ExtendedData>...</ExtendedData>      <!-- new in KML 2.2 -->
+  <!-- inherited from Overlay element -->
+  <color>ffffffff</color>                  <!-- kml:color -->
+  <drawOrder>0</drawOrder>                 <!-- int -->
+  <Icon>...</Icon>
+  <!-- specific to ScreenOverlay -->
+  <overlayXY x="double" y="double" xunits="fraction" yunits="fraction"/>
+    <!-- vec2 -->
+    <!-- xunits and yunits can be one of: fraction, pixels, or insetPixels -->
+  <screenXY x="double" y="double" xunits="fraction" yunits="fraction"/>
+    <!-- vec2 -->
+  <rotationXY x="double" y="double" xunits="fraction" yunits"fraction"/>
+    <!-- vec2 -->
+  <size x="double" y="double" xunits="fraction" yunits="fraction"/>
+    <!-- vec2 -->
+  <rotation>0</rotation>                   <!-- float -->
+ </ScreenOverlay>
+ # * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <Style id="ID">
+<!-- extends StyleSelector -->
+<!-- specific to Style -->
+  <IconStyle>...</IconStyle>
+  <LabelStyle>...</LabelStyle>
+  <LineStyle>...</LineStyle>
+  <PolyStyle>...</PolyStyle>
+  <BalloonStyle>...</BalloonStyle>
+  <ListStyle>...</ListStyle>
+</Style>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <StyleMap id="ID">
+  <!-- extends StyleSelector -->
+  <!-- elements specific to StyleMap -->
+  <Pair id="ID">
+    <key>normal</key>              <!-- kml:styleStateEnum:  normal or highlight -->
+    <styleUrl>...</styleUrl> or <Style>...</Style>
+  </Pair>
+</StyleMap>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <TimeSpan id="ID">
+  <begin>...</begin>     <!-- kml:dateTime -->
+  <end>...</end>         <!-- kml:dateTime -->
+</TimeSpan>
+    <Placemark>
+      <name>Colorado</name>
+      .
+      .
+      .
+      <TimeSpan>
+        <begin>1876-08-01</begin>
+      </TimeSpan>
+    </Placemark>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <TimeStamp id="ID">
+  <when>...</when>      <!-- kml:dateTime -->
+</TimeStamp>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <gx:Tour id="ID">
+  <name>...</name>
+  <description>...</description>
+  <gx:Playlist>
+
+    <!-- any number of gx:TourPrimitive elements -->
+
+  </gx:Playlist>
+</gx:Tour>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+**MIDDLE <gx:Track id="ID">
+  <!-- specific to Track -->
+  <altitudeMode>clampToGround</altitudeMode>
+      <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+      <!-- or, substitute gx:altitudeMode: clampToSeaFloor, relativeToSeaFloor -->
+  <when>...</when>                         <!-- kml:dateTime -->
+  <gx:coord>...</gx:coord>                 <!-- string -->
+  <gx:angles>...</gx:angles>               <!-- string -->
+  <Model>...</Model>
+  <ExtendedData>
+    <SchemaData schemaUrl="anyURI">
+      <gx:SimpleArrayData kml:name="string">
+        <gx:value>...</gx:value>            <!-- string -->
+      </gx:SimpleArrayData>
+    <SchemaData>
+  </ExtendedData>
+</gx:Track>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+E.G.:
+<gx:ViewerOptions>
+        <gx:option name="historicalimagery"></gx:option>
+        <gx:option enabled="0" name="sunlight"></gx:option>
+        <gx:option enabled="0" name="streetview"></gx:option>
+</gx:ViewerOptions>
+
+<gx:ViewerOptions>
+  <option> name=" " type="boolean">     <!-- name="streetview", "historicalimagery", "sunlight", or "groundnavigation" -->
+  </option>
+</gx:ViewerOptions>
+# * %_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_
+
+
+!
