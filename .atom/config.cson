@@ -26,7 +26,7 @@
     useKite: true
     useSnippets: "all"
   autosave:
-    enabled: true
+    enabled: false
   "bracket-matcher":
     highlightMatchingLineNumber: true
   core:
@@ -34,6 +34,7 @@
     disabledPackages: [
       "archive-view"
       "atom-html-preview"
+      "autosave"
       "buildium"
       "Chromo-Color-Previews"
       "image-view"
