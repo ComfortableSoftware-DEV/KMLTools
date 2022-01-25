@@ -65,6 +65,7 @@
       "language-toml"
       "language-typescript"
       "language-yaml"
+      "linter-pylint"
       "minimap"
       "open-on-github"
       "package-generator"
